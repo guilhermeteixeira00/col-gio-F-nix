@@ -1,0 +1,58 @@
+@import url('background.css');
+@import url('header.css');
+@import url('pag.css');
+@import url('cards.css');
+@import url('footer.css');
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* GLOBAL STYLES */
+:root {
+  --primary-color: orange;
+  --secondary-color: rgb(255, 51, 0);
+  --font-family: 'Arial', sans-serif;
+  --font-size: 16px;
+} 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Tinos", serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  min-height: 40px;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+
+@media (max-width: 800px) {
+    .presentation-container {
+        padding: 1.5rem 1rem;
+        max-width: 98vw;
+    }
+    .presentation-container h2 {
+        font-size: 1.5rem;
+    }
+    .presentation-container p {
+        font-size: 1rem;
+    }
+}
