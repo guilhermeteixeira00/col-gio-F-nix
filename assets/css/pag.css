@@ -124,22 +124,41 @@ section {
 }
 
 .about-container button {
-    background: linear-gradient(90deg, #FFB300 0%, #FF6F00 100%);
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color) 90%);
     color: #fff;
-    border: none;
+    border: 2px solid black;
     border-radius: 30px;
     padding: 12px 36px;
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 4px 16px rgba(255, 179, 0, 0.15);
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    transition:
+        color 0.3s,
+        background 0.3s,
+        box-shadow 0.3s,
+        transform 0.2s;
     margin-top: 18px;
     letter-spacing: 1px;
 }
 
 .about-container button:hover {
-    background: linear-gradient(90deg, #FF6F00 0%, #FFB300 100%);
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 8px 24px rgba(255, 111, 0, 0.18);
+    color: black;
+    background: linear-gradient(90deg, #fffbe6, var(--primary-color) 90%);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    animation: borderanimation 3s infinite;
+}
+
+@keyframes borderanimation {
+    0% {
+        border: 2px solid var(--primary-color);
+    }
+
+    50% {
+        border: 2px solid var(--secondary-color);
+    }
+
+    100% {
+        border: 2px solid var(--primary-color);
+    }
 }

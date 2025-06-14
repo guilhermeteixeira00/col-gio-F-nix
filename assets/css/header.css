@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @keyframes borderheader {
-    0% {border-bottom: 1px solid var(--primary-color);}
-    50% {border-bottom: 1px solid var(--secondary-color);}
-    100% {border-bottom: 1px solid var(--primary-color);}
+    0% {
+        border-bottom: 1px solid var(--primary-color);
+    }
+
+    50% {
+        border-bottom: 1px solid var(--secondary-color);
+    }
+
+    100% {
+        border-bottom: 1px solid var(--primary-color);
+    }
 }
 
-header{
+header {
     z-index: 2;
     position: fixed;
     top: 0;
@@ -17,7 +25,7 @@ header{
     border-radius: none;
     animation: borderheader 3s infinite;
     background: rgba(30, 30, 40, 0.85);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15), 0 1.5px 6px rgba(255,255,255,0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 1.5px 6px rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(30px);
     --webkit-backdrop-filter: blur(30px);
     display: flex;
@@ -27,13 +35,13 @@ header{
     padding: 0 40px;
 }
 
-header .logoheader{
+header .logoheader {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-header .logoheader h1{
+header .logoheader h1 {
     font-family: "Tinos", serif;
     font-weight: 400;
     font-style: italic;
@@ -42,21 +50,22 @@ header .logoheader h1{
     transition: color 0.3s, transform 0.3s;
 }
 
-header .logoheader img{
+header .logoheader img {
     width: 120px;
     filter: drop-shadow(0 0 5px snow);
     transition: transform 0.3s;
 }
+
 header .logoheader img:hover {
     transform: scale(1.05) rotate(-2deg);
 }
 
-header nav{
+header nav {
     display: flex;
     gap: 24px;
 }
 
-header nav a button{
+header nav a button {
     font-family: inherit;
     font-size: 1rem;
     font-weight: 600;
@@ -64,21 +73,21 @@ header nav a button{
     color: snow;
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color) 90%);
     padding: 8px 22px;
-    transition: 
+    transition:
         color 0.3s,
         background 0.3s,
         box-shadow 0.3s,
         transform 0.2s;
     border: none;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
     outline: none;
 }
 
-header nav a button:hover{
+header nav a button:hover {
     cursor: pointer;
     color: #222;
     background: linear-gradient(90deg, #fffbe6, var(--primary-color) 80%);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
     transform: translateY(-2px) scale(1.04);
 }
