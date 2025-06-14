@@ -80,7 +80,7 @@
   max-width: 400px;
   width: 90%;
   position: relative;
-  animation: modalFadeIn 0.3s;
+  animation: modalFadeIn 0.3s, bordercard 3s infinite;
 }
 
 #details-content h3 {
